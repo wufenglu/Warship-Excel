@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Excel MetadataPath="\_metadata\AppForm\59eacf70-1cc8-e711-bc0a-4ccc6aeee2e4.metadata.config">
+  <Sheets>
+    <Sheet TableName="cl_Contract">
+      <AreaBlock StartRowIndex="0" EndRowIndex="2" StartColumnIndex="0" EndColumnIndex="5" Height="100" Content="xxx" LanguageKey=""/>
+      <Header StartRowIndex="0" StartColumnIndex="0">
+        <Columns>
+          <Column Field="ContractName" Name="合同名称" LanguageKey="" LanguageAssembly="" Type="Text">
+            <Validation>
+              <Required ErrorMessage="合同必填" LanguageKey="" LanguageAssembly=""/>
+              <Length Length="100" ErrorMessage="长度必须小于100" LanguageKey="" LanguageAssembly=""/>
+              <Format Regex="xxxx" FormatEnum="" ErrorMessage="格式不正确" LanguageKey="" LanguageAssembly=""/>
+            </Validation>
+          </Column>
+          <Column Field="ContractCode" Name="合同编码" LanguageKey="" LanguageAssembly="" Type="Text">
+            <Validation>
+              <Required ErrorMessage="" LanguageKey="" LanguageAssembly=""/>
+              <Length Length="100" ErrorMessage="" LanguageKey="" LanguageAssembly=""/>
+              <Format Regex="" FormatEnum="" ErrorMessage="" LanguageKey="" LanguageAssembly=""/>
+            </Validation>
+          </Column>
+          <Column Field="JfProviderName" Name="甲方单位" LanguageKey="" LanguageAssembly="" Type="Text">
+            <Validation>
+              <Required ErrorMessage="" LanguageKey="" LanguageAssembly=""/>
+              <Length Length="100" ErrorMessage="" LanguageKey="" LanguageAssembly=""/>
+              <Format Regex="" FormatEnum="" ErrorMessage="" LanguageKey="" LanguageAssembly=""/>
+            </Validation>
+          </Column>
+          <Column Field="YfProviderName" Name="乙方单位" LanguageKey="" LanguageAssembly="" Type="Text">
+            <Validation>
+              <Required LanguageKey="" LanguageAssembly=""/>
+              <Length Length="100" ErrorMessage="" LanguageKey="" LanguageAssembly=""/>
+              <Format Regex="" FormatEnum="" ErrorMessage="" LanguageKey="" LanguageAssembly=""/>
+            </Validation>
+          </Column>
+          <Column Field="HtAmount" Name="合同金额" LanguageKey="" LanguageAssembly="" Type="Decimal">
+            <ConvertError ErrorMessage="" LanguageKey="" LanguageAssembly="" />
+            <Validation>
+              <Required ErrorMessage="合同金额必填" LanguageKey="" LanguageAssembly=""/>
+              <Range Minimum="10" Maximum="100" ErrorMessage="范围必须在10-100"  LanguageKey="" LanguageAssembly=""/>
+            </Validation>
+          </Column>
+        </Columns>
+      </Header>
+    </Sheet>
+  </Sheets>  
+</Excel>

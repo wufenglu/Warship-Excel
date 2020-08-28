@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B805C93-0A5B-476A-BBDA-F34E56881BB0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Warship</RootNamespace>
+    <AssemblyName>Warship</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Warship.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Warship.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\99 packages\00_平台接口\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\99 packages\00_平台接口\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\99 packages\00_平台接口\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\99 packages\00_平台接口\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Excel\Export\Helper\RowColor.cs" />
+    <Compile Include="Excel\Export\IExport.cs" />
+    <Compile Include="Excel\Import\IImport.cs" />
+    <Compile Include="Excel\Model\Color.cs" />
+    <Compile Include="Excel\Model\Column\ColumnConvertErrorModel.cs" />
+    <Compile Include="Excel\Model\RowStyleSet.cs" />
+    <Compile Include="Utility\CellStyleHelper.cs" />
+    <Compile Include="Utility\ConfigHelper.cs" />
+    <Compile Include="Excel\Import\Helper\DynamicColumn.cs" />
+    <Compile Include="Excel\Common\ExcelHelper.cs" />
+    <Compile Include="Excel\Common\FileHelper.cs" />
+    <Compile Include="Excel\Common\PictureHelper.cs" />
+    <Compile Include="Excel\Excel.cs" />
+    <Compile Include="Excel\Export\Export.cs" />
+    <Compile Include="Excel\Export\Helper\DeleteRow.cs" />
+    <Compile Include="Excel\Export\Helper\SheetColumnType.cs" />
+    <Compile Include="Excel\Export\Helper\SheetLocked.cs" />
+    <Compile Include="Excel\Export\Helper\SheetColumnHidden.cs" />
+    <Compile Include="Excel\Export\Helper\Comment.cs" />
+    <Compile Include="Excel\Export\Helper\HeadColor.cs" />
+    <Compile Include="Excel\Export\Helper\AreaBlock.cs" />
+    <Compile Include="Excel\Export\Helper\SlaveExcel.cs" />
+    <Compile Include="Excel\Import\Helper\Cascade.cs" />
+    <Compile Include="Excel\Import\ImportByConfig.cs" />
+    <Compile Include="Excel\Import\Import.cs" />
+    <Compile Include="Excel\Model\ColumnErrorMessage.cs" />
+    <Compile Include="Excel\Model\AreaBlock.cs" />
+    <Compile Include="Excel\Model\Column\ColumnFile.cs" />
+    <Compile Include="Excel\Model\Column\ColumnModel.cs" />
+    <Compile Include="Excel\Model\Column\ColumnValidationModel.cs" />
+    <Compile Include="Excel\Model\Const\ExcelValidationMessage.cs" />
+    <Compile Include="Excel\Model\ExcelSheetModel.cs" />
+    <Compile Include="Excel\Model\ExcelRowModel.cs" />
+    <Compile Include="Excel\Model\ExcelGlobalDTO.cs" />
+    <Compile Include="Excel\Model\ExcelVersionEnum.cs" />
+    <Compile Include="Excel\Model\WorkSpace.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\DataTableEntityBuilder.cs" />
+    <Compile Include="Utility\EntityProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Word\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Warship.Attribute\Warship.Attribute.csproj">
+      <Project>{deb62ac0-9edf-4f58-a1f9-c9c0be33f320}</Project>
+      <Name>Warship.Attribute</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warship.Utility\Warship.Utility.csproj">
+      <Project>{0e7d3c53-caf4-4ed2-bd80-8e7c5aedbb24}</Project>
+      <Name>Warship.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

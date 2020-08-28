@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EEF67E45-1EBE-4966-8A24-2B1B1B64DB82}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mysoft.Clgyl.Demo</RootNamespace>
+    <AssemblyName>Mysoft.Clgyl.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mysoft.Map6.Platform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f5b8a9315ee7ce2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\99 packages\00_平台接口\Mysoft.Map6.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\99 packages\00_平台接口\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContractProductRemarkImportDTO.cs" />
+    <Compile Include="DataMerge\DataMerge2.cs" />
+    <Compile Include="DataMerge\DataMerge.cs" />
+    <Compile Include="DataMerge\DataMergeExec.cs" />
+    <Compile Include="DemoDTO\ContractAdjustPriceExeclDTO.cs" />
+    <Compile Include="DemoDTO\ProductDTO.cs" />
+    <Compile Include="DynamicColumnDTO.cs" />
+    <Compile Include="ContractImportDTO.cs" />
+    <Compile Include="ContractProductImportDTO.cs" />
+    <Compile Include="DemoDTO\ContractImportDTO.cs" />
+    <Compile Include="Excel\二开扩展注入.cs" />
+    <Compile Include="Excel\基础验证.cs" />
+    <Compile Include="Excel\下拉框设置.cs" />
+    <Compile Include="Excel\动态添加特性启用禁用.cs" />
+    <Compile Include="Excel\二开扩展增加导出列.cs" />
+    <Compile Include="Excel\基于文件的导出.cs" />
+    <Compile Include="Excel\材料图片导入.cs" />
+    <Compile Include="Excel\标准导入导出.cs" />
+    <Compile Include="Excel\添加头部说明.cs" />
+    <Compile Include="Excel\基于数据导出%28单Sheet及多Sheet%29.cs" />
+    <Compile Include="Excel\级联.cs" />
+    <Compile Include="Excel\获取所有列的错误信息.cs" />
+    <Compile Include="Excel\行单元格颜色设置.cs" />
+    <Compile Include="Excel\配置化XML.cs" />
+    <Compile Include="LinkLevel.cs" />
+    <Compile Include="Metadata\AppForm.cs" />
+    <Compile Include="Metadata\Contract.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Excel\配置化.cs" />
+    <Compile Include="TestModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Warship.Attribute\Warship.Attribute.csproj">
+      <Project>{deb62ac0-9edf-4f58-a1f9-c9c0be33f320}</Project>
+      <Name>Warship.Attribute</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warship.Utility\Warship.Utility.csproj">
+      <Project>{0E7D3C53-CAF4-4ED2-BD80-8E7C5AEDBB24}</Project>
+      <Name>Warship.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warship\Warship.csproj">
+      <Project>{1b805c93-0a5b-476a-bbda-f34e56881bb0}</Project>
+      <Name>Warship</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Template\合同基本信息.custom.xml" />
+    <Content Include="Template\合同基本信息.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

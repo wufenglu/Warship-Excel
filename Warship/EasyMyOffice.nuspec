@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0.0.0</version>
+    <title>EasyMyOffice</title>
+    <authors>yank</authors>
+    <owners>yank</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+    <projectUrl>http://nuget.mingyuanyun.com/</projectUrl>
+    <iconUrl>http://www.mingyuanyun.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>EasyMyOffice</description>
+    <releaseNotes>对NPOI进行封装，提高开发效率，实体化。</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>EasyMyOffice</tags>
+  </metadata>
+</package>
