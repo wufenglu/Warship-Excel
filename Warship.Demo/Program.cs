@@ -26,17 +26,71 @@ using System.Threading;
 
 namespace Warship.Demo
 {
+    /// <summary> 
+    ///客户信息
+    /// </summary>
+    public class CustomersDTO : ExcelRowModel
+    {
+        /// <summary> 
+        ///客户名称
+        /// </summary>
+        [ExcelHead("客户名称")]
+        public string CustomerName { get; set; }
+        /// <summary> 
+        ///手机
+        /// </summary>
+        [ExcelHead("手机")]
+        public string Mobile { get; set; }
+        /// <summary> 
+        ///邮箱
+        /// </summary>
+        [ExcelHead("邮箱")]
+        public string Email { get; set; }
+        /// <summary> 
+        ///地址
+        /// </summary>
+        [ExcelHead("地址")]
+        public string Address { get; set; }
+
+        /// <summary>
+        /// 积分
+        /// </summary>
+        [ExcelHead("积分")]
+        public int? Integral { get; set; }
+    }
     class Program
     {
         public static Dictionary<int, List<PerformanceDtlEntity>> dicList = new Dictionary<int, List<PerformanceDtlEntity>>();
+
         /// <summary>
         /// 基于文件的导出
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            string excelPath = @"E:\\Yank\\Git\Warship-Excel\\Warship.Demo\\Template\\合同导入模板.xlsx";
+            Import<Warship.Demo.DemoDTO.ContractImportDTO> import = new Import<Warship.Demo.DemoDTO.ContractImportDTO>(1);
+            import.ExcelGlobalDTO.SetDefaultSheet();
+            import.Execute(excelPath);
 
-            Thread thread=new Thread(() => {
+            //设置导出错误信息
+            Export<Warship.Demo.DemoDTO.ContractImportDTO> export = new Export<Warship.Demo.DemoDTO.ContractImportDTO>();
+            export.Execute(import.ExcelGlobalDTO);
+        }
+
+        /// <summary>
+        /// 基于文件的导出
+        /// </summary>
+        /// <param name="args"></param>
+        static void Main2(string[] args)
+        {
+            //导入
+            Import<CustomersDTO> import = new Import<CustomersDTO>();
+            import.Execute(@"C:\Users\yank\Desktop\客户导入模板.xlsx");
+            var list = import.ExcelGlobalDTO.Sheet.SheetEntityList;
+
+            Thread thread = new Thread(() =>
+            {
                 LinkLevel1 level1 = new LinkLevel1();
                 level1.Exec();
 
@@ -46,7 +100,8 @@ namespace Warship.Demo
             });
             thread.Start();
 
-            Thread thread2 = new Thread(() => {
+            Thread thread2 = new Thread(() =>
+            {
                 LinkLevel1 level1 = new LinkLevel1();
                 level1.Exec();
 
@@ -56,7 +111,8 @@ namespace Warship.Demo
             });
             thread2.Start();
 
-            Thread thread3 = new Thread(() => {
+            Thread thread3 = new Thread(() =>
+            {
                 LinkLevel1 level1 = new LinkLevel1();
                 level1.Exec();
 
@@ -66,7 +122,8 @@ namespace Warship.Demo
             });
             thread3.Start();
 
-            Thread thread7 = new Thread(() => {
+            Thread thread7 = new Thread(() =>
+            {
                 LinkLevel1 level1 = new LinkLevel1();
                 level1.Exec();
 
@@ -76,7 +133,8 @@ namespace Warship.Demo
             });
             thread7.Start();
 
-            Thread thread4 = new Thread(() => {
+            Thread thread4 = new Thread(() =>
+            {
                 LinkLevel1 level1 = new LinkLevel1();
                 level1.Exec();
 
@@ -86,7 +144,8 @@ namespace Warship.Demo
             });
             thread4.Start();
 
-            Thread thread5 = new Thread(() => {
+            Thread thread5 = new Thread(() =>
+            {
                 LinkLevel1 level1 = new LinkLevel1();
                 level1.Exec();
 
@@ -96,7 +155,8 @@ namespace Warship.Demo
             });
             thread5.Start();
 
-            Thread thread6 = new Thread(() => {
+            Thread thread6 = new Thread(() =>
+            {
                 LinkLevel1 level1 = new LinkLevel1();
                 level1.Exec();
 

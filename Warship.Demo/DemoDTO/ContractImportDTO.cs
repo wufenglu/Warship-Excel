@@ -50,6 +50,8 @@ namespace Warship.Demo.DemoDTO
         /// 合同编码
         /// </summary>
         [ExcelHead("合同金额", IsLocked = false, IsHiddenColumn = false, ColumnWidth = 8)]
+        [Required(ErrorMessage = "合同金额必填")]
+        [Range(Maximum = 100, Minimum = 0, ErrorMessage = "合同金额必须在0~100")]
         public decimal? Amount { get; set; }
     }
 }

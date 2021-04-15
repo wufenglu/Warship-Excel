@@ -39,6 +39,12 @@ namespace Warship.Demo
         [ExcelHead("合同材料", IsLocked = false, IsHiddenColumn = false, ColumnWidth = 8)]
         public List<ContractProductImportDTO> Products { get; set; }
 
+        /// <summary>
+        /// 合同金额
+        /// </summary>
+        [ExcelHead("合同金额", IsLocked = false, IsHiddenColumn = false, ColumnWidth = 8)]
+        [Required(ErrorMessage = "合同金额必填")]
+        [Range(Maximum =100,Minimum = 0, ErrorMessage = "合同编码必填")]
         public decimal? HtAmount { get; set; }
     }
 }
